@@ -4,4 +4,5 @@ import * as cdk from '@aws-cdk/core';
 import { AcertusEcsCdkStacksample } from '../lib/acertus-ecs-cdk-stack';
 
 const app = new cdk.App();
-new AcertusEcsCdkStacksample(app, 'AcertusEcsCdkStacksample');
+const envUS  = { account: '665106695518', region: 'ap-south-1' };
+new AcertusEcsCdkStacksample(app, 'AcertusEcsCdkStacksample', { env: envUS });
