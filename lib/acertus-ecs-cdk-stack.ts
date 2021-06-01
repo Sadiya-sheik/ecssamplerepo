@@ -36,15 +36,13 @@ export class ECSStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props: ECSStackProps) {
     super(scope, id, props);
 
-    const clientName = props.clientName;
-    const clientPrefix = `${clientName}-${props.environment}-server`;
+    //const routecertificate = certificatemanager.Certificate.fromCertificateArn(this, "certificate", "arn:aws:acm:ap-south-1:665106695518:certificate/d55e09cc-f9e7-4b8e-9c69-0d85bcd24436");
+    const repository = ecr.Repository.fromRepositoryArn(this, "repository", 'arn:aws:ecr:ap-south-1:665106695518:repository/adminui1');
+    //const cloudfronturl = "arn:aws:cloudfront::850805969385:distribution/E3SXCGGDWS0B0P";
+    const clientPrefix = "ADMINUI";
 
     const vpc = ec2.Vpc.fromLookup(this, `${clientPrefix}-vpc`, {
-      vpcId: props.vpcId,
-    });
-
-    const repository = new ecr.Repository(this, `${clientPrefix}-repository`, {
-      repositoryName: `${clientPrefix}-repository`,
+      vpcId: "vpc-01e4c6262e955743a",
     });
 
     // The code that defines your stack goes here
@@ -63,7 +61,7 @@ export class ECSStack extends cdk.Stack {
         internetFacing: true,
       }
     );
-
+/*
     const zone = route53.HostedZone.fromLookup(this, `${clientPrefix}-zone`, {
       domainName: props.domain,
     });
@@ -78,7 +76,7 @@ export class ECSStack extends cdk.Stack {
       ttl: cdk.Duration.seconds(300),
       comment: `${props.environment} API domain`,
       zone: zone,
-    });
+    }); */
 
     const targetGroupHttp = new elasticloadbalancing.ApplicationTargetGroup(
       this,
@@ -96,7 +94,7 @@ export class ECSStack extends cdk.Stack {
       protocol: elasticloadbalancing.Protocol.HTTP,
     });
 
-    const cert = new certificatemanager.Certificate(
+   /* const cert = new certificatemanager.Certificate(
       this,
       `${clientPrefix}-cert`,
       {
@@ -104,11 +102,11 @@ export class ECSStack extends cdk.Stack {
         subjectAlternativeNames: [`*.${props.domain}`],
         validation: certificatemanager.CertificateValidation.fromDns(zone),
       }
-    );
+    );*/
     const listener = elb.addListener("Listener", {
       open: true,
-      port: 443,
-      certificates: [cert],
+      port: 80
+      //certificates: [cert],
     });
 
     listener.addTargetGroups(`${clientPrefix}-tg`, {
@@ -122,14 +120,14 @@ export class ECSStack extends cdk.Stack {
 
     elbSG.addIngressRule(
       ec2.Peer.anyIpv4(),
-      ec2.Port.tcp(443),
+      ec2.Port.tcp(80),
       "Allow https traffic"
     );
 
     elb.addSecurityGroup(elbSG);
 
     const bucket = new s3.Bucket(this, `${clientPrefix}-s3-bucket`, {
-      bucketName: `${clientName}-${props.environment}-assets`,
+      bucketName: `adminui-assets`,
     });
 
     const taskRole = new iam.Role(this, `${clientPrefix}-task-role`, {
@@ -148,7 +146,7 @@ export class ECSStack extends cdk.Stack {
           }),
           new iam.PolicyStatement({
             effect: iam.Effect.ALLOW,
-            actions: ["SES:*"],
+            actions: ["dynamodb:*"],
             resources: ["*"],
           }),
         ],
@@ -177,7 +175,7 @@ export class ECSStack extends cdk.Stack {
       logging: ecs.LogDriver.awsLogs({ streamPrefix: clientPrefix }),
     });
 
-    container.addPortMappings({ containerPort: 80 });
+    container.addPortMappings({ containerPort: 8080 });
 
     const ecsSG = new ec2.SecurityGroup(this, `${clientPrefix}-ecsSG`, {
       vpc,
