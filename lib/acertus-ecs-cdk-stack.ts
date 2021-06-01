@@ -165,7 +165,6 @@ export class AcertusEcsCdkStacksample extends cdk.Stack {
     const container = taskDefinition.addContainer(`${clientPrefix}-container`, {
       image: image,
       memoryLimitMiB: 512,
-      environment: props.taskEnv,
       logging: ecs.LogDriver.awsLogs({ streamPrefix: clientPrefix }),
     });
 
@@ -204,7 +203,7 @@ export class AcertusEcsCdkStacksample extends cdk.Stack {
     scalableTaget.scaleOnCpuUtilization(`${clientPrefix}-ScaleUpCPU`, {
       targetUtilizationPercent: 75,
     });
-
+/*
     // outputs to be used in code deployments
     new cdk.CfnOutput(this, `${props.environment}ServiceName`, {
       exportName: `${props.environment}ServiceName`,
@@ -224,6 +223,6 @@ export class AcertusEcsCdkStacksample extends cdk.Stack {
     new cdk.CfnOutput(this, `${props.environment}ClusterName`, {
       exportName: `${props.environment}ClusterName`,
       value: cluster.clusterName,
-    });
+    });*/
   }
 }
