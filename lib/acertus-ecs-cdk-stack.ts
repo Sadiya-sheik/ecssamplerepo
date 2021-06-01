@@ -27,7 +27,7 @@ interface ECSStackProps extends cdk.StackProps {
  *
  */
 export class AcertusEcsCdkStacksample extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props: ECSStackProps) {
+  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     //const routecertificate = certificatemanager.Certificate.fromCertificateArn(this, "certificate", "arn:aws:acm:ap-south-1:665106695518:certificate/d55e09cc-f9e7-4b8e-9c69-0d85bcd24436");
