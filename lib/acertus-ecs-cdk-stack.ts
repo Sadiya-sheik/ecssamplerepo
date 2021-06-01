@@ -1,93 +1,114 @@
-import * as cdk from '@aws-cdk/core';
-import * as ec2 from "@aws-cdk/aws-ec2";
+import * as cdk from "@aws-cdk/core";
 import * as ecs from "@aws-cdk/aws-ecs";
-import * as ecs_patterns from "@aws-cdk/aws-ecs-patterns";
-import * as iam from "@aws-cdk/aws-iam";
-import * as elbv2 from '@aws-cdk/aws-elasticloadbalancingv2';
-//import * as s3deploy from "@aws-cdk/aws-s3-deployment";
-import * as autoscaling from '@aws-cdk/aws-autoscaling';
-import { Vpc } from '@aws-cdk/aws-ec2';
+import * as ec2 from "@aws-cdk/aws-ec2";
 import * as ecr from "@aws-cdk/aws-ecr";
 import * as s3 from "@aws-cdk/aws-s3";
+import * as iam from "@aws-cdk/aws-iam";
 import * as route53 from "@aws-cdk/aws-route53";
 import * as route53targets from "@aws-cdk/aws-route53-targets";
 import * as certificatemanager from "@aws-cdk/aws-certificatemanager";
 
-export class AcertusEcsCdkStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+import * as elasticloadbalancing from "@aws-cdk/aws-elasticloadbalancingv2";
+
+interface ECSStackProps extends cdk.StackProps {
+  clientName: string;
+  environment: string;
+  domain: string;
+  taskEnv: { [key: string]: string } | undefined;
+  vpcId: string;
+}
+
+/**
+ * EXAMPLE ECS
+ *
+ * A full provisioned ECS deployment setup
+ *
+ * Creates all ECS resources from docker containers through to domain configuration
+ *
+ */
+export class ECSStack extends cdk.Stack {
+  /**
+   *
+   * @param {cdk.Construct} scope
+   * @param {string} id
+   * @param {cdk.StackProps=} props
+   */
+  constructor(scope: cdk.Construct, id: string, props: ECSStackProps) {
     super(scope, id, props);
 
-    const routecertificate = certificatemanager.Certificate.fromCertificateArn(this, "certificate", "arn:aws:acm:us-east-1:665106695518:certificate/99221ffa-abbb-4553-9150-b9c1724b0115");
-    const repository = ecr.Repository.fromRepositoryArn(this, "repository", '665106695518.dkr.ecr.ap-south-1.amazonaws.com/adminui1');
-    const cloudfronturl = "arn:aws:cloudfront::850805969385:distribution/E3SXCGGDWS0B0P";
-    const clientPrefix = "ADMINUI";
-    // New VPC creation
-    const adminvpc = new ec2.Vpc(this, "Acertus-Admin-Vpc", {
-      maxAzs: 2,
-      cidr: "10.0.0.0/16",
-      natGateways: 1,
-      subnetConfiguration: [
-        {
-          cidrMask: 24,
-          name: 'adminpublicsub',
-          subnetType: ec2.SubnetType.PUBLIC
-        },
-        {
-          cidrMask: 24,
-          name: 'adminpriivatesub',
-          subnetType: ec2.SubnetType.PRIVATE
-        }]
+    const clientName = props.clientName;
+    const clientPrefix = `${clientName}-${props.environment}-server`;
 
+    const vpc = ec2.Vpc.fromLookup(this, `${clientPrefix}-vpc`, {
+      vpcId: props.vpcId,
+    });
+
+    const repository = new ecr.Repository(this, `${clientPrefix}-repository`, {
+      repositoryName: `${clientPrefix}-repository`,
     });
 
     // The code that defines your stack goes here
     const cluster = new ecs.Cluster(this, `${clientPrefix}-cluster`, {
       clusterName: `${clientPrefix}-cluster`,
-      vpc: adminvpc
-    });
-/*
-    const repository = new ecr.Repository(this, `${clientPrefix}-repository`, {
-      repositoryName: "665106695518.dkr.ecr.ap-south-1.amazonaws.com/adminui",
-    });*/
-
-    //Application Load Balancer
-    const asg = new autoscaling.AutoScalingGroup(this, "ASG", {
-      //adminvpc
-      vpc: adminvpc,
-      instanceType: ec2.InstanceType.of(ec2.InstanceClass.T2, ec2.InstanceSize.MICRO),
-      machineImage: new ec2.AmazonLinuxImage(),
+      vpc,
     });
 
-    //targetgroup
-    const targetGroupHttp = new elbv2.ApplicationTargetGroup(
+    // load balancer resources
+    const elb = new elasticloadbalancing.ApplicationLoadBalancer(
+      this,
+      `${clientPrefix}-elb`,
+      {
+        vpc,
+        vpcSubnets: { subnets: vpc.publicSubnets },
+        internetFacing: true,
+      }
+    );
+
+    const zone = route53.HostedZone.fromLookup(this, `${clientPrefix}-zone`, {
+      domainName: props.domain,
+    });
+
+    new route53.ARecord(this, `${clientPrefix}-domain`, {
+      recordName: `${
+        props.environment !== "production" ? `${props.environment}-` : ""
+      }api.${props.domain}`,
+      target: route53.RecordTarget.fromAlias(
+        new route53targets.LoadBalancerTarget(elb)
+      ),
+      ttl: cdk.Duration.seconds(300),
+      comment: `${props.environment} API domain`,
+      zone: zone,
+    });
+
+    const targetGroupHttp = new elasticloadbalancing.ApplicationTargetGroup(
       this,
       `${clientPrefix}-target`,
       {
         port: 80,
-        vpc: adminvpc,
-        protocol: elbv2.ApplicationProtocol.HTTP,
-        targetType: elbv2.TargetType.IP,
+        vpc,
+        protocol: elasticloadbalancing.ApplicationProtocol.HTTP,
+        targetType: elasticloadbalancing.TargetType.IP,
       }
     );
 
     targetGroupHttp.configureHealthCheck({
-      path: "/health",
-      protocol: elbv2.Protocol.HTTP,
+      path: "/api/status",
+      protocol: elasticloadbalancing.Protocol.HTTP,
     });
 
-    const lb = new elbv2.ApplicationLoadBalancer(this, `${clientPrefix}-elb`, {
-      vpc: adminvpc,
-      internetFacing: true,
-      vpcSubnets: {
-        subnets: adminvpc.publicSubnets
+    const cert = new certificatemanager.Certificate(
+      this,
+      `${clientPrefix}-cert`,
+      {
+        domainName: props.domain,
+        subjectAlternativeNames: [`*.${props.domain}`],
+        validation: certificatemanager.CertificateValidation.fromDns(zone),
       }
-    });
-
-    //elbv2.ApplicationLoadBalancer.fromLookup()
-    const listener = lb.addListener("Listener", {
+    );
+    const listener = elb.addListener("Listener", {
       open: true,
       port: 443,
-      certificates: [routecertificate],
+      certificates: [cert],
     });
 
     listener.addTargetGroups(`${clientPrefix}-tg`, {
@@ -95,7 +116,7 @@ export class AcertusEcsCdkStack extends cdk.Stack {
     });
 
     const elbSG = new ec2.SecurityGroup(this, `${clientPrefix}-elbSG`, {
-      vpc: adminvpc,
+      vpc,
       allowAllOutbound: true,
     });
 
@@ -105,37 +126,11 @@ export class AcertusEcsCdkStack extends cdk.Stack {
       "Allow https traffic"
     );
 
-    lb.addSecurityGroup(elbSG);
+    elb.addSecurityGroup(elbSG);
 
-    //S3 Code
     const bucket = new s3.Bucket(this, `${clientPrefix}-s3-bucket`, {
-      bucketName: `${clientPrefix}-assets`,
-      publicReadAccess: true,
-      websiteIndexDocument: 'index.html',
-      removalPolicy: cdk.RemovalPolicy.DESTROY,
-      cors: [
-        {
-          allowedOrigins: ["*"],
-          allowedMethods: [s3.HttpMethods.GET],
-          maxAge: 3000,
-        },
-      ],
+      bucketName: `${clientName}-${props.environment}-assets`,
     });
-/*
-    // uploads index.html to s3 bucket
-    new s3deploy.BucketDeployment(this, "AcertusFinalcicd-Website", {
-      sources: [s3deploy.Source.asset('./build')],
-      destinationBucket: bucket,
-    });
-
-    bucket.addToResourcePolicy(
-      new iam.PolicyStatement({
-        sid: "Grant Cloudfront Origin Access Identity access to S3 bucket",
-        actions: ["s3:GetObject"],
-        resources: [bucket.bucketArn + "/admin/"],
-        principals: [cloudfronturl.       cloudfrontOAI.grantPrincipal],
-      })
-    ); */
 
     const taskRole = new iam.Role(this, `${clientPrefix}-task-role`, {
       assumedBy: new iam.ServicePrincipal("ecs-tasks.amazonaws.com"),
@@ -153,7 +148,7 @@ export class AcertusEcsCdkStack extends cdk.Stack {
           }),
           new iam.PolicyStatement({
             effect: iam.Effect.ALLOW,
-            actions: ["dynamodb:*"],
+            actions: ["SES:*"],
             resources: ["*"],
           }),
         ],
@@ -169,7 +164,7 @@ export class AcertusEcsCdkStack extends cdk.Stack {
         cpu: "256",
         memoryMiB: "512",
         networkMode: ecs.NetworkMode.AWS_VPC,
-        taskRole: taskRole
+        taskRole: taskRole,
       }
     );
 
@@ -177,13 +172,15 @@ export class AcertusEcsCdkStack extends cdk.Stack {
 
     const container = taskDefinition.addContainer(`${clientPrefix}-container`, {
       image: image,
-      memoryLimitMiB: 512
+      memoryLimitMiB: 512,
+      environment: props.taskEnv,
+      logging: ecs.LogDriver.awsLogs({ streamPrefix: clientPrefix }),
     });
 
-    container.addPortMappings({ containerPort: 8080 });
+    container.addPortMappings({ containerPort: 80 });
 
     const ecsSG = new ec2.SecurityGroup(this, `${clientPrefix}-ecsSG`, {
-      vpc: adminvpc,
+      vpc,
       allowAllOutbound: true,
     });
 
@@ -192,34 +189,49 @@ export class AcertusEcsCdkStack extends cdk.Stack {
       ec2.Port.allTcp(),
       "Application load balancer"
     );
-/*
-    // Create a load-balanced Fargate service and make it public
-    new ecs_patterns.ApplicationLoadBalancedFargateService(this, "MyFargateService", {
-      cluster: cluster, // Required
-      cpu: 512, // Default is 256
-      desiredCount: 3, // Default is 1
-      taskImageOptions: { image: ecs.ContainerImage.fromRegistry("665106695518.dkr.ecr.ap-south-1.amazonaws.com/adminui") },
-      memoryLimitMiB: 2048, // Default is 512
-      publicLoadBalancer: true,
-      listenerPort: 8080
-    });  */
-
-
-
-
-    // Instantiate an Amazon ECS Service
-    
 
     const service = new ecs.FargateService(this, `${clientPrefix}-service`, {
       cluster,
       desiredCount: 1,
       taskDefinition,
       securityGroups: [ecsSG],
-      vpcSubnets: {
-        subnets: adminvpc.privateSubnets
-      }
+      assignPublicIp: true,
     });
 
     service.attachToApplicationTargetGroup(targetGroupHttp);
+
+    const scalableTaget = service.autoScaleTaskCount({
+      minCapacity: 1,
+      maxCapacity: 5,
+    });
+
+    scalableTaget.scaleOnMemoryUtilization(`${clientPrefix}-ScaleUpMem`, {
+      targetUtilizationPercent: 75,
+    });
+
+    scalableTaget.scaleOnCpuUtilization(`${clientPrefix}-ScaleUpCPU`, {
+      targetUtilizationPercent: 75,
+    });
+
+    // outputs to be used in code deployments
+    new cdk.CfnOutput(this, `${props.environment}ServiceName`, {
+      exportName: `${props.environment}ServiceName`,
+      value: service.serviceName,
+    });
+
+    new cdk.CfnOutput(this, `${props.environment}ImageRepositoryUri`, {
+      exportName: `${props.environment}ImageRepositoryUri`,
+      value: repository.repositoryUri,
+    });
+
+    new cdk.CfnOutput(this, `${props.environment}ImageName`, {
+      exportName: `${props.environment}ImageName`,
+      value: image.imageName,
+    });
+
+    new cdk.CfnOutput(this, `${props.environment}ClusterName`, {
+      exportName: `${props.environment}ClusterName`,
+      value: cluster.clusterName,
+    });
   }
 }
