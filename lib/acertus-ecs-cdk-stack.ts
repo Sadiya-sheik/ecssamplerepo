@@ -26,7 +26,7 @@ interface ECSStackProps extends cdk.StackProps {
  * Creates all ECS resources from docker containers through to domain configuration
  *
  */
-export class ECSStack extends cdk.Stack {
+export class AcertusEcsCdkStacksample extends cdk.Stack {
   /**
    *
    * @param {cdk.Construct} scope
