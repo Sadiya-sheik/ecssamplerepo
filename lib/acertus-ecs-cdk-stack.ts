@@ -121,7 +121,7 @@ export class AcertusEcsCdkStacksample extends cdk.Stack {
     elb.addSecurityGroup(elbSG);
 
     const bucket = new s3.Bucket(this, `${clientPrefix}-s3-bucket`, {
-      bucketName: `adminui-assets`,
+      bucketName: `adminuisample-assets`,
     });
 
     const taskRole = new iam.Role(this, `${clientPrefix}-task-role`, {
