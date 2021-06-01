@@ -9,7 +9,7 @@ import * as route53targets from "@aws-cdk/aws-route53-targets";
 import * as certificatemanager from "@aws-cdk/aws-certificatemanager";
 
 import * as elasticloadbalancing from "@aws-cdk/aws-elasticloadbalancingv2";
-
+/*
 interface ECSStackProps extends cdk.StackProps {
   clientName: string;
   environment: string;
@@ -27,12 +27,6 @@ interface ECSStackProps extends cdk.StackProps {
  *
  */
 export class AcertusEcsCdkStacksample extends cdk.Stack {
-  /**
-   *
-   * @param {cdk.Construct} scope
-   * @param {string} id
-   * @param {cdk.StackProps=} props
-   */
   constructor(scope: cdk.Construct, id: string, props: ECSStackProps) {
     super(scope, id, props);
 
