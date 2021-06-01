@@ -1,0 +1,54 @@
+name: Deployment to dev environment
+
+on:
+ push:
+    branches: [ main1 ]
+ pull_request:
+    branches: [ main1 ]
+
+jobs:
+  Cleanup: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Runner workspace path
+        run: |
+          echo "Cleaning up previous run"
+          rm -rf "${{ github.workspace }}"
+  DeployDev:
+    needs: [Cleanup]
+    runs-on: ubuntu-latest
+    environment: 
+      name: dev
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      - name: Install CDK
+        run: npm install -g aws-cdk
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-skip-session-tagging: true
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{secrets.AWS_REGION}}
+          #role-to-assume: ${{secrets.AWS_ROLE_TO_ASSUME}}
+          #role-external-id: ${{ secrets.AWS_ROLE_EXTERNAL_ID }}
+          #role-duration-seconds: 1200
+          #role-session-name: ec2-cdk-session
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          aws ecr get-login-password --region ${{secrets.AWS_REGION}} | docker login --username ${{secrets.AWS_USER}} --password-stdin ${{secrets.ECR_REGISTRY}}
+          docker build -t ${{secrets.IMAGE_NAME}} .
+          docker tag adminui1:latest 665106695518.dkr.ecr.ap-south-1.amazonaws.com/adminui1:latest
+          docker push 665106695518.dkr.ecr.ap-south-1.amazonaws.com/adminui1:latest
+          npm install
+          #node ./config/tables/create-customer-info-table.js
+          #node ./config/tables/load-customer-info.js
+          cdk synth
+          cdk bootstrap
+          cdk deploy AcertusEcsCdkStacksample ---require-approval never
