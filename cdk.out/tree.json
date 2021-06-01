@@ -1,0 +1,2127 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.106.1"
+        }
+      },
+      "AcertusEcsCdkStack": {
+        "id": "AcertusEcsCdkStack",
+        "path": "AcertusEcsCdkStack",
+        "children": {
+          "Acertus-Admin-Vpc": {
+            "id": "Acertus-Admin-Vpc",
+            "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
+                  "aws:cdk:cloudformation:props": {
+                    "cidrBlock": "10.0.0.0/16",
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "instanceTenancy": "default",
+                    "tags": [
+                      {
+                        "key": "Name",
+                        "value": "AcertusEcsCdkStack/Acertus-Admin-Vpc"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnVPC",
+                  "version": "1.106.1"
+                }
+              },
+              "adminpublicsubSubnet1": {
+                "id": "adminpublicsubSubnet1",
+                "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.0.0/24",
+                        "vpcId": {
+                          "Ref": "AcertusAdminVpc47E30E0F"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            0,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "adminpublicsub"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "AcertusAdminVpc47E30E0F"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "AcertusAdminVpcadminpublicsubSubnet1RouteTable6C430541"
+                        },
+                        "subnetId": {
+                          "Ref": "AcertusAdminVpcadminpublicsubSubnet1SubnetD015648A"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "AcertusAdminVpcadminpublicsubSubnet1RouteTable6C430541"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": {
+                          "Ref": "AcertusAdminVpcIGWCF6B1851"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "EIP": {
+                    "id": "EIP",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1/EIP",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::EIP",
+                      "aws:cdk:cloudformation:props": {
+                        "domain": "vpc",
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnEIP",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "NATGateway": {
+                    "id": "NATGateway",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1/NATGateway",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::NatGateway",
+                      "aws:cdk:cloudformation:props": {
+                        "allocationId": {
+                          "Fn::GetAtt": [
+                            "AcertusAdminVpcadminpublicsubSubnet1EIP6BC6C42A",
+                            "AllocationId"
+                          ]
+                        },
+                        "subnetId": {
+                          "Ref": "AcertusAdminVpcadminpublicsubSubnet1SubnetD015648A"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnNatGateway",
+                      "version": "1.106.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                  "version": "1.106.1"
+                }
+              },
+              "adminpublicsubSubnet2": {
+                "id": "adminpublicsubSubnet2",
+                "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet2",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet2/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.1.0/24",
+                        "vpcId": {
+                          "Ref": "AcertusAdminVpc47E30E0F"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            1,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "adminpublicsub"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet2"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet2/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet2/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "AcertusAdminVpc47E30E0F"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet2"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet2/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "AcertusAdminVpcadminpublicsubSubnet2RouteTableC49C4369"
+                        },
+                        "subnetId": {
+                          "Ref": "AcertusAdminVpcadminpublicsubSubnet2Subnet71DF4CF4"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet2/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "AcertusAdminVpcadminpublicsubSubnet2RouteTableC49C4369"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": {
+                          "Ref": "AcertusAdminVpcIGWCF6B1851"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.106.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                  "version": "1.106.1"
+                }
+              },
+              "adminpriivatesubSubnet1": {
+                "id": "adminpriivatesubSubnet1",
+                "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet1",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet1/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.2.0/24",
+                        "vpcId": {
+                          "Ref": "AcertusAdminVpc47E30E0F"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            0,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": false,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "adminpriivatesub"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Private"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet1/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet1/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "AcertusAdminVpc47E30E0F"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet1/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "AcertusAdminVpcadminpriivatesubSubnet1RouteTableCB75ACA6"
+                        },
+                        "subnetId": {
+                          "Ref": "AcertusAdminVpcadminpriivatesubSubnet1SubnetCE3FBBCB"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet1/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "AcertusAdminVpcadminpriivatesubSubnet1RouteTableCB75ACA6"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "natGatewayId": {
+                          "Ref": "AcertusAdminVpcadminpublicsubSubnet1NATGatewayF3883B66"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.106.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PrivateSubnet",
+                  "version": "1.106.1"
+                }
+              },
+              "adminpriivatesubSubnet2": {
+                "id": "adminpriivatesubSubnet2",
+                "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet2",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet2/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.3.0/24",
+                        "vpcId": {
+                          "Ref": "AcertusAdminVpc47E30E0F"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            1,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": false,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "adminpriivatesub"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Private"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet2"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet2/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet2/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "AcertusAdminVpc47E30E0F"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet2"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet2/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "AcertusAdminVpcadminpriivatesubSubnet2RouteTableC363C5D3"
+                        },
+                        "subnetId": {
+                          "Ref": "AcertusAdminVpcadminpriivatesubSubnet2Subnet3D971429"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet2/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "AcertusAdminVpcadminpriivatesubSubnet2RouteTableC363C5D3"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "natGatewayId": {
+                          "Ref": "AcertusAdminVpcadminpublicsubSubnet1NATGatewayF3883B66"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.106.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PrivateSubnet",
+                  "version": "1.106.1"
+                }
+              },
+              "IGW": {
+                "id": "IGW",
+                "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/IGW",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::InternetGateway",
+                  "aws:cdk:cloudformation:props": {
+                    "tags": [
+                      {
+                        "key": "Name",
+                        "value": "AcertusEcsCdkStack/Acertus-Admin-Vpc"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnInternetGateway",
+                  "version": "1.106.1"
+                }
+              },
+              "VPCGW": {
+                "id": "VPCGW",
+                "path": "AcertusEcsCdkStack/Acertus-Admin-Vpc/VPCGW",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::VPCGatewayAttachment",
+                  "aws:cdk:cloudformation:props": {
+                    "vpcId": {
+                      "Ref": "AcertusAdminVpc47E30E0F"
+                    },
+                    "internetGatewayId": {
+                      "Ref": "AcertusAdminVpcIGWCF6B1851"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnVPCGatewayAttachment",
+                  "version": "1.106.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.Vpc",
+              "version": "1.106.1"
+            }
+          },
+          "MyCluster": {
+            "id": "MyCluster",
+            "path": "AcertusEcsCdkStack/MyCluster",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "AcertusEcsCdkStack/MyCluster/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECS::Cluster",
+                  "aws:cdk:cloudformation:props": {}
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ecs.CfnCluster",
+                  "version": "1.106.1"
+                }
+              },
+              "DefaultAutoScalingGroupCapacity": {
+                "id": "DefaultAutoScalingGroupCapacity",
+                "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity",
+                "children": {
+                  "InstanceSecurityGroup": {
+                    "id": "InstanceSecurityGroup",
+                    "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/InstanceSecurityGroup",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/InstanceSecurityGroup/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                          "aws:cdk:cloudformation:props": {
+                            "groupDescription": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/InstanceSecurityGroup",
+                            "securityGroupEgress": [
+                              {
+                                "cidrIp": "0.0.0.0/0",
+                                "description": "Allow all outbound traffic by default",
+                                "ipProtocol": "-1"
+                              }
+                            ],
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity"
+                              }
+                            ],
+                            "vpcId": {
+                              "Ref": "AcertusAdminVpc47E30E0F"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroup",
+                          "version": "1.106.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.SecurityGroup",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "InstanceRole": {
+                    "id": "InstanceRole",
+                    "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/InstanceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/InstanceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          "ec2.",
+                                          {
+                                            "Ref": "AWS::URLSuffix"
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnRole",
+                          "version": "1.106.1"
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/InstanceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/InstanceRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": [
+                                        "ecs:DeregisterContainerInstance",
+                                        "ecs:RegisterContainerInstance",
+                                        "ecs:Submit*"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::GetAtt": [
+                                          "MyCluster4C1BA579",
+                                          "Arn"
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "Action": [
+                                        "ecs:Poll",
+                                        "ecs:StartTelemetrySession"
+                                      ],
+                                      "Condition": {
+                                        "ArnEquals": {
+                                          "ecs:cluster": {
+                                            "Fn::GetAtt": [
+                                              "MyCluster4C1BA579",
+                                              "Arn"
+                                            ]
+                                          }
+                                        }
+                                      },
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    },
+                                    {
+                                      "Action": [
+                                        "ecs:DiscoverPollEndpoint",
+                                        "ecr:GetAuthorizationToken",
+                                        "logs:CreateLogStream",
+                                        "logs:PutLogEvents"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "MyClusterDefaultAutoScalingGroupCapacityInstanceRoleDefaultPolicy30978618",
+                                "roles": [
+                                  {
+                                    "Ref": "MyClusterDefaultAutoScalingGroupCapacityInstanceRole55343BBD"
+                                  }
+                                ]
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                              "version": "1.106.1"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.Policy",
+                          "version": "1.106.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Role",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "InstanceProfile": {
+                    "id": "InstanceProfile",
+                    "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/InstanceProfile",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::InstanceProfile",
+                      "aws:cdk:cloudformation:props": {
+                        "roles": [
+                          {
+                            "Ref": "MyClusterDefaultAutoScalingGroupCapacityInstanceRole55343BBD"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnInstanceProfile",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "LaunchConfig": {
+                    "id": "LaunchConfig",
+                    "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/LaunchConfig",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::AutoScaling::LaunchConfiguration",
+                      "aws:cdk:cloudformation:props": {
+                        "imageId": {
+                          "Ref": "SsmParameterValueawsserviceecsoptimizedamiamazonlinux2recommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter"
+                        },
+                        "instanceType": "t2.medium",
+                        "iamInstanceProfile": {
+                          "Ref": "MyClusterDefaultAutoScalingGroupCapacityInstanceProfile115717A8"
+                        },
+                        "securityGroups": [
+                          {
+                            "Fn::GetAtt": [
+                              "MyClusterDefaultAutoScalingGroupCapacityInstanceSecurityGroupB9E866B5",
+                              "GroupId"
+                            ]
+                          }
+                        ],
+                        "userData": {
+                          "Fn::Base64": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "#!/bin/bash\necho ECS_CLUSTER=",
+                                {
+                                  "Ref": "MyCluster4C1BA579"
+                                },
+                                " >> /etc/ecs/ecs.config\nsudo iptables --insert FORWARD 1 --in-interface docker+ --destination 169.254.169.254/32 --jump DROP\nsudo service iptables save\necho ECS_AWSVPC_BLOCK_IMDS=true >> /etc/ecs/ecs.config"
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-autoscaling.CfnLaunchConfiguration",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "ASG": {
+                    "id": "ASG",
+                    "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/ASG",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::AutoScaling::AutoScalingGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "maxSize": "2",
+                        "minSize": "1",
+                        "desiredCapacity": "2",
+                        "launchConfigurationName": {
+                          "Ref": "MyClusterDefaultAutoScalingGroupCapacityLaunchConfig797D41B1"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity",
+                            "propagateAtLaunch": true
+                          }
+                        ],
+                        "vpcZoneIdentifier": [
+                          {
+                            "Ref": "AcertusAdminVpcadminpriivatesubSubnet1SubnetCE3FBBCB"
+                          },
+                          {
+                            "Ref": "AcertusAdminVpcadminpriivatesubSubnet2Subnet3D971429"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-autoscaling.CfnAutoScalingGroup",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "DrainECSHook": {
+                    "id": "DrainECSHook",
+                    "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/DrainECSHook",
+                    "children": {
+                      "Function": {
+                        "id": "Function",
+                        "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/DrainECSHook/Function",
+                        "children": {
+                          "ServiceRole": {
+                            "id": "ServiceRole",
+                            "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/DrainECSHook/Function/ServiceRole",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/DrainECSHook/Function/ServiceRole/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                                  "aws:cdk:cloudformation:props": {
+                                    "assumeRolePolicyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": "sts:AssumeRole",
+                                          "Effect": "Allow",
+                                          "Principal": {
+                                            "Service": "lambda.amazonaws.com"
+                                          }
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    },
+                                    "managedPolicyArns": [
+                                      {
+                                        "Fn::Join": [
+                                          "",
+                                          [
+                                            "arn:",
+                                            {
+                                              "Ref": "AWS::Partition"
+                                            },
+                                            ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                          ]
+                                        ]
+                                      }
+                                    ],
+                                    "tags": [
+                                      {
+                                        "key": "Name",
+                                        "value": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity"
+                                      }
+                                    ]
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "@aws-cdk/aws-iam.CfnRole",
+                                  "version": "1.106.1"
+                                }
+                              },
+                              "DefaultPolicy": {
+                                "id": "DefaultPolicy",
+                                "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/DrainECSHook/Function/ServiceRole/DefaultPolicy",
+                                "children": {
+                                  "Resource": {
+                                    "id": "Resource",
+                                    "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/DrainECSHook/Function/ServiceRole/DefaultPolicy/Resource",
+                                    "attributes": {
+                                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                      "aws:cdk:cloudformation:props": {
+                                        "policyDocument": {
+                                          "Statement": [
+                                            {
+                                              "Action": [
+                                                "ec2:DescribeInstances",
+                                                "ec2:DescribeInstanceAttribute",
+                                                "ec2:DescribeInstanceStatus",
+                                                "ec2:DescribeHosts"
+                                              ],
+                                              "Effect": "Allow",
+                                              "Resource": "*"
+                                            },
+                                            {
+                                              "Action": "autoscaling:CompleteLifecycleAction",
+                                              "Effect": "Allow",
+                                              "Resource": {
+                                                "Fn::Join": [
+                                                  "",
+                                                  [
+                                                    "arn:",
+                                                    {
+                                                      "Ref": "AWS::Partition"
+                                                    },
+                                                    ":autoscaling:",
+                                                    {
+                                                      "Ref": "AWS::Region"
+                                                    },
+                                                    ":",
+                                                    {
+                                                      "Ref": "AWS::AccountId"
+                                                    },
+                                                    ":autoScalingGroup:*:autoScalingGroupName/",
+                                                    {
+                                                      "Ref": "MyClusterDefaultAutoScalingGroupCapacityASGEE30310C"
+                                                    }
+                                                  ]
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "Action": [
+                                                "ecs:DescribeContainerInstances",
+                                                "ecs:DescribeTasks"
+                                              ],
+                                              "Condition": {
+                                                "ArnEquals": {
+                                                  "ecs:cluster": {
+                                                    "Fn::GetAtt": [
+                                                      "MyCluster4C1BA579",
+                                                      "Arn"
+                                                    ]
+                                                  }
+                                                }
+                                              },
+                                              "Effect": "Allow",
+                                              "Resource": "*"
+                                            },
+                                            {
+                                              "Action": [
+                                                "ecs:ListContainerInstances",
+                                                "ecs:SubmitContainerStateChange",
+                                                "ecs:SubmitTaskStateChange"
+                                              ],
+                                              "Effect": "Allow",
+                                              "Resource": {
+                                                "Fn::GetAtt": [
+                                                  "MyCluster4C1BA579",
+                                                  "Arn"
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "Action": [
+                                                "ecs:UpdateContainerInstancesState",
+                                                "ecs:ListTasks"
+                                              ],
+                                              "Condition": {
+                                                "ArnEquals": {
+                                                  "ecs:cluster": {
+                                                    "Fn::GetAtt": [
+                                                      "MyCluster4C1BA579",
+                                                      "Arn"
+                                                    ]
+                                                  }
+                                                }
+                                              },
+                                              "Effect": "Allow",
+                                              "Resource": "*"
+                                            }
+                                          ],
+                                          "Version": "2012-10-17"
+                                        },
+                                        "policyName": "MyClusterDefaultAutoScalingGroupCapacityDrainECSHookFunctionServiceRoleDefaultPolicy34116F29",
+                                        "roles": [
+                                          {
+                                            "Ref": "MyClusterDefaultAutoScalingGroupCapacityDrainECSHookFunctionServiceRoleDD05C69C"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "constructInfo": {
+                                      "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                                      "version": "1.106.1"
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "@aws-cdk/aws-iam.Policy",
+                                  "version": "1.106.1"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-iam.Role",
+                              "version": "1.106.1"
+                            }
+                          },
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/DrainECSHook/Function/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                              "aws:cdk:cloudformation:props": {
+                                "code": {
+                                  "zipFile": "import boto3, json, os, time\n\necs = boto3.client('ecs')\nautoscaling = boto3.client('autoscaling')\n\n\ndef lambda_handler(event, context):\n  print(json.dumps(event))\n  cluster = os.environ['CLUSTER']\n  snsTopicArn = event['Records'][0]['Sns']['TopicArn']\n  lifecycle_event = json.loads(event['Records'][0]['Sns']['Message'])\n  instance_id = lifecycle_event.get('EC2InstanceId')\n  if not instance_id:\n    print('Got event without EC2InstanceId: %s', json.dumps(event))\n    return\n\n  instance_arn = container_instance_arn(cluster, instance_id)\n  print('Instance %s has container instance ARN %s' % (lifecycle_event['EC2InstanceId'], instance_arn))\n\n  if not instance_arn:\n    return\n\n  task_arns = container_instance_task_arns(cluster, instance_arn)\n  \n  if task_arns:\n    print('Instance ARN %s has task ARNs %s' % (instance_arn, ', '.join(task_arns)))\n\n  while has_tasks(cluster, instance_arn, task_arns):\n    time.sleep(10)\n\n  try:\n    print('Terminating instance %s' % instance_id)\n    autoscaling.complete_lifecycle_action(\n        LifecycleActionResult='CONTINUE',\n        **pick(lifecycle_event, 'LifecycleHookName', 'LifecycleActionToken', 'AutoScalingGroupName'))\n  except Exception as e:\n    # Lifecycle action may have already completed.\n    print(str(e))\n\n\ndef container_instance_arn(cluster, instance_id):\n  \"\"\"Turn an instance ID into a container instance ARN.\"\"\"\n  arns = ecs.list_container_instances(cluster=cluster, filter='ec2InstanceId==' + instance_id)['containerInstanceArns']\n  if not arns:\n    return None\n  return arns[0]\n\ndef container_instance_task_arns(cluster, instance_arn):\n  \"\"\"Fetch tasks for a container instance ARN.\"\"\"\n  arns = ecs.list_tasks(cluster=cluster, containerInstance=instance_arn)['taskArns']\n  return arns\n\ndef has_tasks(cluster, instance_arn, task_arns):\n  \"\"\"Return True if the instance is running tasks for the given cluster.\"\"\"\n  instances = ecs.describe_container_instances(cluster=cluster, containerInstances=[instance_arn])['containerInstances']\n  if not instances:\n    return False\n  instance = instances[0]\n\n  if instance['status'] == 'ACTIVE':\n    # Start draining, then try again later\n    set_container_instance_to_draining(cluster, instance_arn)\n    return True\n\n  task_count = None\n\n  if task_arns:\n    # Fetch details for tasks running on the container instance\n    tasks = ecs.describe_tasks(cluster=cluster, tasks=task_arns)['tasks']\n    if tasks:\n      # Consider any non-stopped tasks as running\n      task_count = sum(task['lastStatus'] != 'STOPPED' for task in tasks) + instance['pendingTasksCount']\n  \n  if not task_count:\n    # Fallback to instance task counts if detailed task information is unavailable\n    task_count = instance['runningTasksCount'] + instance['pendingTasksCount']\n    \n  print('Instance %s has %s tasks' % (instance_arn, task_count))\n\n  return task_count > 0\n\ndef set_container_instance_to_draining(cluster, instance_arn):\n  ecs.update_container_instances_state(\n      cluster=cluster,\n      containerInstances=[instance_arn], status='DRAINING')\n\n\ndef pick(dct, *keys):\n  \"\"\"Pick a subset of a dict.\"\"\"\n  return {k: v for k, v in dct.items() if k in keys}\n"
+                                },
+                                "role": {
+                                  "Fn::GetAtt": [
+                                    "MyClusterDefaultAutoScalingGroupCapacityDrainECSHookFunctionServiceRoleDD05C69C",
+                                    "Arn"
+                                  ]
+                                },
+                                "environment": {
+                                  "variables": {
+                                    "CLUSTER": {
+                                      "Ref": "MyCluster4C1BA579"
+                                    }
+                                  }
+                                },
+                                "handler": "index.lambda_handler",
+                                "runtime": "python3.6",
+                                "tags": [
+                                  {
+                                    "key": "Name",
+                                    "value": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity"
+                                  }
+                                ],
+                                "timeout": 310
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                              "version": "1.106.1"
+                            }
+                          },
+                          "AllowInvoke:AcertusEcsCdkStackMyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHookTopic8A7E3466": {
+                            "id": "AllowInvoke:AcertusEcsCdkStackMyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHookTopic8A7E3466",
+                            "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/DrainECSHook/Function/AllowInvoke:AcertusEcsCdkStackMyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHookTopic8A7E3466",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                              "aws:cdk:cloudformation:props": {
+                                "action": "lambda:InvokeFunction",
+                                "functionName": {
+                                  "Fn::GetAtt": [
+                                    "MyClusterDefaultAutoScalingGroupCapacityDrainECSHookFunctionD7DD402A",
+                                    "Arn"
+                                  ]
+                                },
+                                "principal": "sns.amazonaws.com",
+                                "sourceArn": {
+                                  "Ref": "MyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHookTopic06F84FD7"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-lambda.CfnPermission",
+                              "version": "1.106.1"
+                            }
+                          },
+                          "Topic": {
+                            "id": "Topic",
+                            "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/DrainECSHook/Function/Topic",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/DrainECSHook/Function/Topic/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::SNS::Subscription",
+                                  "aws:cdk:cloudformation:props": {
+                                    "protocol": "lambda",
+                                    "topicArn": {
+                                      "Ref": "MyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHookTopic06F84FD7"
+                                    },
+                                    "endpoint": {
+                                      "Fn::GetAtt": [
+                                        "MyClusterDefaultAutoScalingGroupCapacityDrainECSHookFunctionD7DD402A",
+                                        "Arn"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "@aws-cdk/aws-sns.CfnSubscription",
+                                  "version": "1.106.1"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-sns.Subscription",
+                              "version": "1.106.1"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-lambda.Function",
+                          "version": "1.106.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Construct",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "LifecycleHookDrainHook": {
+                    "id": "LifecycleHookDrainHook",
+                    "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/LifecycleHookDrainHook",
+                    "children": {
+                      "Role": {
+                        "id": "Role",
+                        "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/LifecycleHookDrainHook/Role",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/LifecycleHookDrainHook/Role/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                              "aws:cdk:cloudformation:props": {
+                                "assumeRolePolicyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "sts:AssumeRole",
+                                      "Effect": "Allow",
+                                      "Principal": {
+                                        "Service": "autoscaling.amazonaws.com"
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "tags": [
+                                  {
+                                    "key": "Name",
+                                    "value": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity"
+                                  }
+                                ]
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-iam.CfnRole",
+                              "version": "1.106.1"
+                            }
+                          },
+                          "DefaultPolicy": {
+                            "id": "DefaultPolicy",
+                            "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/LifecycleHookDrainHook/Role/DefaultPolicy",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/LifecycleHookDrainHook/Role/DefaultPolicy/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                  "aws:cdk:cloudformation:props": {
+                                    "policyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": "sns:Publish",
+                                          "Effect": "Allow",
+                                          "Resource": {
+                                            "Ref": "MyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHookTopic06F84FD7"
+                                          }
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    },
+                                    "policyName": "MyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHookRoleDefaultPolicy136A9F23",
+                                    "roles": [
+                                      {
+                                        "Ref": "MyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHookRole4CB1E106"
+                                      }
+                                    ]
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                                  "version": "1.106.1"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-iam.Policy",
+                              "version": "1.106.1"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.Role",
+                          "version": "1.106.1"
+                        }
+                      },
+                      "Topic": {
+                        "id": "Topic",
+                        "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/LifecycleHookDrainHook/Topic",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/LifecycleHookDrainHook/Topic/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::SNS::Topic",
+                              "aws:cdk:cloudformation:props": {
+                                "tags": [
+                                  {
+                                    "key": "Name",
+                                    "value": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity"
+                                  }
+                                ]
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-sns.CfnTopic",
+                              "version": "1.106.1"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-sns.Topic",
+                          "version": "1.106.1"
+                        }
+                      },
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/LifecycleHookDrainHook/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::AutoScaling::LifecycleHook",
+                          "aws:cdk:cloudformation:props": {
+                            "autoScalingGroupName": {
+                              "Ref": "MyClusterDefaultAutoScalingGroupCapacityASGEE30310C"
+                            },
+                            "lifecycleTransition": "autoscaling:EC2_INSTANCE_TERMINATING",
+                            "defaultResult": "CONTINUE",
+                            "heartbeatTimeout": 300,
+                            "notificationTargetArn": {
+                              "Ref": "MyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHookTopic06F84FD7"
+                            },
+                            "roleArn": {
+                              "Fn::GetAtt": [
+                                "MyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHookRole4CB1E106",
+                                "Arn"
+                              ]
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-autoscaling.CfnLifecycleHook",
+                          "version": "1.106.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-autoscaling.LifecycleHook",
+                      "version": "1.106.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-autoscaling.AutoScalingGroup",
+                  "version": "1.106.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ecs.Cluster",
+              "version": "1.106.1"
+            }
+          },
+          "MyFargateService": {
+            "id": "MyFargateService",
+            "path": "AcertusEcsCdkStack/MyFargateService",
+            "children": {
+              "LB": {
+                "id": "LB",
+                "path": "AcertusEcsCdkStack/MyFargateService/LB",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "AcertusEcsCdkStack/MyFargateService/LB/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+                      "aws:cdk:cloudformation:props": {
+                        "loadBalancerAttributes": [
+                          {
+                            "key": "deletion_protection.enabled",
+                            "value": "false"
+                          }
+                        ],
+                        "scheme": "internet-facing",
+                        "securityGroups": [
+                          {
+                            "Fn::GetAtt": [
+                              "MyFargateServiceLBSecurityGroup6FBF16F1",
+                              "GroupId"
+                            ]
+                          }
+                        ],
+                        "subnets": [
+                          {
+                            "Ref": "AcertusAdminVpcadminpublicsubSubnet1SubnetD015648A"
+                          },
+                          {
+                            "Ref": "AcertusAdminVpcadminpublicsubSubnet2Subnet71DF4CF4"
+                          }
+                        ],
+                        "type": "application"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-elasticloadbalancingv2.CfnLoadBalancer",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "SecurityGroup": {
+                    "id": "SecurityGroup",
+                    "path": "AcertusEcsCdkStack/MyFargateService/LB/SecurityGroup",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "AcertusEcsCdkStack/MyFargateService/LB/SecurityGroup/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                          "aws:cdk:cloudformation:props": {
+                            "groupDescription": "Automatically created Security Group for ELB AcertusEcsCdkStackMyFargateServiceLBB0F5BF33",
+                            "securityGroupIngress": [
+                              {
+                                "cidrIp": "0.0.0.0/0",
+                                "ipProtocol": "tcp",
+                                "fromPort": 80,
+                                "toPort": 80,
+                                "description": "Allow from anyone on port 80"
+                              }
+                            ],
+                            "vpcId": {
+                              "Ref": "AcertusAdminVpc47E30E0F"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroup",
+                          "version": "1.106.1"
+                        }
+                      },
+                      "to AcertusEcsCdkStackMyFargateServiceSecurityGroupA21F5E73:80": {
+                        "id": "to AcertusEcsCdkStackMyFargateServiceSecurityGroupA21F5E73:80",
+                        "path": "AcertusEcsCdkStack/MyFargateService/LB/SecurityGroup/to AcertusEcsCdkStackMyFargateServiceSecurityGroupA21F5E73:80",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupEgress",
+                          "aws:cdk:cloudformation:props": {
+                            "groupId": {
+                              "Fn::GetAtt": [
+                                "MyFargateServiceLBSecurityGroup6FBF16F1",
+                                "GroupId"
+                              ]
+                            },
+                            "ipProtocol": "tcp",
+                            "description": "Load balancer to target",
+                            "destinationSecurityGroupId": {
+                              "Fn::GetAtt": [
+                                "MyFargateServiceSecurityGroup7016792A",
+                                "GroupId"
+                              ]
+                            },
+                            "fromPort": 80,
+                            "toPort": 80
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroupEgress",
+                          "version": "1.106.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.SecurityGroup",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "PublicListener": {
+                    "id": "PublicListener",
+                    "path": "AcertusEcsCdkStack/MyFargateService/LB/PublicListener",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "AcertusEcsCdkStack/MyFargateService/LB/PublicListener/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::Listener",
+                          "aws:cdk:cloudformation:props": {
+                            "defaultActions": [
+                              {
+                                "type": "forward",
+                                "targetGroupArn": {
+                                  "Ref": "MyFargateServiceLBPublicListenerECSGroup4A3EDF05"
+                                }
+                              }
+                            ],
+                            "loadBalancerArn": {
+                              "Ref": "MyFargateServiceLBDE830E97"
+                            },
+                            "port": 80,
+                            "protocol": "HTTP"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-elasticloadbalancingv2.CfnListener",
+                          "version": "1.106.1"
+                        }
+                      },
+                      "ECSGroup": {
+                        "id": "ECSGroup",
+                        "path": "AcertusEcsCdkStack/MyFargateService/LB/PublicListener/ECSGroup",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "AcertusEcsCdkStack/MyFargateService/LB/PublicListener/ECSGroup/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+                              "aws:cdk:cloudformation:props": {
+                                "port": 80,
+                                "protocol": "HTTP",
+                                "targetType": "ip",
+                                "vpcId": {
+                                  "Ref": "AcertusAdminVpc47E30E0F"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-elasticloadbalancingv2.CfnTargetGroup",
+                              "version": "1.106.1"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-elasticloadbalancingv2.ApplicationTargetGroup",
+                          "version": "1.106.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-elasticloadbalancingv2.ApplicationListener",
+                      "version": "1.106.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-elasticloadbalancingv2.ApplicationLoadBalancer",
+                  "version": "1.106.1"
+                }
+              },
+              "LoadBalancerDNS": {
+                "id": "LoadBalancerDNS",
+                "path": "AcertusEcsCdkStack/MyFargateService/LoadBalancerDNS",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnOutput",
+                  "version": "1.106.1"
+                }
+              },
+              "ServiceURL": {
+                "id": "ServiceURL",
+                "path": "AcertusEcsCdkStack/MyFargateService/ServiceURL",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnOutput",
+                  "version": "1.106.1"
+                }
+              },
+              "TaskDef": {
+                "id": "TaskDef",
+                "path": "AcertusEcsCdkStack/MyFargateService/TaskDef",
+                "children": {
+                  "TaskRole": {
+                    "id": "TaskRole",
+                    "path": "AcertusEcsCdkStack/MyFargateService/TaskDef/TaskRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "AcertusEcsCdkStack/MyFargateService/TaskDef/TaskRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "ecs-tasks.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnRole",
+                          "version": "1.106.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Role",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "AcertusEcsCdkStack/MyFargateService/TaskDef/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ECS::TaskDefinition",
+                      "aws:cdk:cloudformation:props": {
+                        "containerDefinitions": [
+                          {
+                            "essential": true,
+                            "image": "665106695518.dkr.ecr.ap-south-1.amazonaws.com/adminui",
+                            "name": "web",
+                            "portMappings": [
+                              {
+                                "containerPort": 80,
+                                "protocol": "tcp"
+                              }
+                            ],
+                            "logConfiguration": {
+                              "logDriver": "awslogs",
+                              "options": {
+                                "awslogs-group": {
+                                  "Ref": "MyFargateServiceTaskDefwebLogGroup4A6C44E8"
+                                },
+                                "awslogs-stream-prefix": "MyFargateService",
+                                "awslogs-region": {
+                                  "Ref": "AWS::Region"
+                                }
+                              }
+                            }
+                          }
+                        ],
+                        "cpu": "512",
+                        "executionRoleArn": {
+                          "Fn::GetAtt": [
+                            "MyFargateServiceTaskDefExecutionRoleD6305504",
+                            "Arn"
+                          ]
+                        },
+                        "family": "AcertusEcsCdkStackMyFargateServiceTaskDef46F092F9",
+                        "memory": "2048",
+                        "networkMode": "awsvpc",
+                        "requiresCompatibilities": [
+                          "FARGATE"
+                        ],
+                        "taskRoleArn": {
+                          "Fn::GetAtt": [
+                            "MyFargateServiceTaskDefTaskRole62C7D397",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ecs.CfnTaskDefinition",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "web": {
+                    "id": "web",
+                    "path": "AcertusEcsCdkStack/MyFargateService/TaskDef/web",
+                    "children": {
+                      "LogGroup": {
+                        "id": "LogGroup",
+                        "path": "AcertusEcsCdkStack/MyFargateService/TaskDef/web/LogGroup",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "AcertusEcsCdkStack/MyFargateService/TaskDef/web/LogGroup/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::Logs::LogGroup",
+                              "aws:cdk:cloudformation:props": {}
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-logs.CfnLogGroup",
+                              "version": "1.106.1"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-logs.LogGroup",
+                          "version": "1.106.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ecs.ContainerDefinition",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "ExecutionRole": {
+                    "id": "ExecutionRole",
+                    "path": "AcertusEcsCdkStack/MyFargateService/TaskDef/ExecutionRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "AcertusEcsCdkStack/MyFargateService/TaskDef/ExecutionRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "ecs-tasks.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnRole",
+                          "version": "1.106.1"
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "AcertusEcsCdkStack/MyFargateService/TaskDef/ExecutionRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "AcertusEcsCdkStack/MyFargateService/TaskDef/ExecutionRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": [
+                                        "logs:CreateLogStream",
+                                        "logs:PutLogEvents"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::GetAtt": [
+                                          "MyFargateServiceTaskDefwebLogGroup4A6C44E8",
+                                          "Arn"
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "MyFargateServiceTaskDefExecutionRoleDefaultPolicyEC22B20F",
+                                "roles": [
+                                  {
+                                    "Ref": "MyFargateServiceTaskDefExecutionRoleD6305504"
+                                  }
+                                ]
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                              "version": "1.106.1"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.Policy",
+                          "version": "1.106.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Role",
+                      "version": "1.106.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ecs.FargateTaskDefinition",
+                  "version": "1.106.1"
+                }
+              },
+              "Service": {
+                "id": "Service",
+                "path": "AcertusEcsCdkStack/MyFargateService/Service",
+                "children": {
+                  "Service": {
+                    "id": "Service",
+                    "path": "AcertusEcsCdkStack/MyFargateService/Service/Service",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ECS::Service",
+                      "aws:cdk:cloudformation:props": {
+                        "cluster": {
+                          "Ref": "MyCluster4C1BA579"
+                        },
+                        "deploymentConfiguration": {
+                          "maximumPercent": 200,
+                          "minimumHealthyPercent": 50
+                        },
+                        "desiredCount": 3,
+                        "enableEcsManagedTags": false,
+                        "healthCheckGracePeriodSeconds": 60,
+                        "launchType": "FARGATE",
+                        "loadBalancers": [
+                          {
+                            "targetGroupArn": {
+                              "Ref": "MyFargateServiceLBPublicListenerECSGroup4A3EDF05"
+                            },
+                            "containerName": "web",
+                            "containerPort": 80
+                          }
+                        ],
+                        "networkConfiguration": {
+                          "awsvpcConfiguration": {
+                            "assignPublicIp": "DISABLED",
+                            "subnets": [
+                              {
+                                "Ref": "AcertusAdminVpcadminpriivatesubSubnet1SubnetCE3FBBCB"
+                              },
+                              {
+                                "Ref": "AcertusAdminVpcadminpriivatesubSubnet2Subnet3D971429"
+                              }
+                            ],
+                            "securityGroups": [
+                              {
+                                "Fn::GetAtt": [
+                                  "MyFargateServiceSecurityGroup7016792A",
+                                  "GroupId"
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "taskDefinition": {
+                          "Ref": "MyFargateServiceTaskDef5DA17B39"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ecs.CfnService",
+                      "version": "1.106.1"
+                    }
+                  },
+                  "SecurityGroup": {
+                    "id": "SecurityGroup",
+                    "path": "AcertusEcsCdkStack/MyFargateService/Service/SecurityGroup",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "AcertusEcsCdkStack/MyFargateService/Service/SecurityGroup/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                          "aws:cdk:cloudformation:props": {
+                            "groupDescription": "AcertusEcsCdkStack/MyFargateService/Service/SecurityGroup",
+                            "securityGroupEgress": [
+                              {
+                                "cidrIp": "0.0.0.0/0",
+                                "description": "Allow all outbound traffic by default",
+                                "ipProtocol": "-1"
+                              }
+                            ],
+                            "vpcId": {
+                              "Ref": "AcertusAdminVpc47E30E0F"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroup",
+                          "version": "1.106.1"
+                        }
+                      },
+                      "from AcertusEcsCdkStackMyFargateServiceLBSecurityGroup709ED4C3:80": {
+                        "id": "from AcertusEcsCdkStackMyFargateServiceLBSecurityGroup709ED4C3:80",
+                        "path": "AcertusEcsCdkStack/MyFargateService/Service/SecurityGroup/from AcertusEcsCdkStackMyFargateServiceLBSecurityGroup709ED4C3:80",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                          "aws:cdk:cloudformation:props": {
+                            "ipProtocol": "tcp",
+                            "description": "Load balancer to target",
+                            "fromPort": 80,
+                            "groupId": {
+                              "Fn::GetAtt": [
+                                "MyFargateServiceSecurityGroup7016792A",
+                                "GroupId"
+                              ]
+                            },
+                            "sourceSecurityGroupId": {
+                              "Fn::GetAtt": [
+                                "MyFargateServiceLBSecurityGroup6FBF16F1",
+                                "GroupId"
+                              ]
+                            },
+                            "toPort": 80
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroupIngress",
+                          "version": "1.106.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.SecurityGroup",
+                      "version": "1.106.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ecs.FargateService",
+                  "version": "1.106.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ecs-patterns.ApplicationLoadBalancedFargateService",
+              "version": "1.106.1"
+            }
+          },
+          "SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": {
+            "id": "SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter",
+            "path": "AcertusEcsCdkStack/SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.CfnParameter",
+              "version": "1.106.1"
+            }
+          },
+          "SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118": {
+            "id": "SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118",
+            "path": "AcertusEcsCdkStack/SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Resource",
+              "version": "1.106.1"
+            }
+          },
+          "TaskDef": {
+            "id": "TaskDef",
+            "path": "AcertusEcsCdkStack/TaskDef",
+            "children": {
+              "TaskRole": {
+                "id": "TaskRole",
+                "path": "AcertusEcsCdkStack/TaskDef/TaskRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "AcertusEcsCdkStack/TaskDef/TaskRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "ecs-tasks.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.106.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.106.1"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "AcertusEcsCdkStack/TaskDef/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECS::TaskDefinition",
+                  "aws:cdk:cloudformation:props": {
+                    "containerDefinitions": [
+                      {
+                        "essential": true,
+                        "image": "665106695518.dkr.ecr.ap-south-1.amazonaws.com/adminui",
+                        "memory": 512,
+                        "name": "DefaultContainer"
+                      }
+                    ],
+                    "cpu": "256",
+                    "family": "AcertusEcsCdkStackTaskDefBE6BBEEE",
+                    "memory": "512",
+                    "networkMode": "awsvpc",
+                    "requiresCompatibilities": [
+                      "FARGATE"
+                    ],
+                    "taskRoleArn": {
+                      "Fn::GetAtt": [
+                        "TaskDefTaskRole1EDB4A67",
+                        "Arn"
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ecs.CfnTaskDefinition",
+                  "version": "1.106.1"
+                }
+              },
+              "DefaultContainer": {
+                "id": "DefaultContainer",
+                "path": "AcertusEcsCdkStack/TaskDef/DefaultContainer",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ecs.ContainerDefinition",
+                  "version": "1.106.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ecs.FargateTaskDefinition",
+              "version": "1.106.1"
+            }
+          },
+          "Service": {
+            "id": "Service",
+            "path": "AcertusEcsCdkStack/Service",
+            "children": {
+              "Service": {
+                "id": "Service",
+                "path": "AcertusEcsCdkStack/Service/Service",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECS::Service",
+                  "aws:cdk:cloudformation:props": {
+                    "cluster": {
+                      "Ref": "MyCluster4C1BA579"
+                    },
+                    "deploymentConfiguration": {
+                      "maximumPercent": 200,
+                      "minimumHealthyPercent": 50
+                    },
+                    "enableEcsManagedTags": false,
+                    "launchType": "FARGATE",
+                    "networkConfiguration": {
+                      "awsvpcConfiguration": {
+                        "assignPublicIp": "DISABLED",
+                        "subnets": [
+                          {
+                            "Ref": "AcertusAdminVpcadminpriivatesubSubnet1SubnetCE3FBBCB"
+                          },
+                          {
+                            "Ref": "AcertusAdminVpcadminpriivatesubSubnet2Subnet3D971429"
+                          }
+                        ],
+                        "securityGroups": [
+                          {
+                            "Fn::GetAtt": [
+                              "ServiceSecurityGroupC96ED6A7",
+                              "GroupId"
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "taskDefinition": {
+                      "Ref": "TaskDef54694570"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ecs.CfnService",
+                  "version": "1.106.1"
+                }
+              },
+              "SecurityGroup": {
+                "id": "SecurityGroup",
+                "path": "AcertusEcsCdkStack/Service/SecurityGroup",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "AcertusEcsCdkStack/Service/SecurityGroup/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "groupDescription": "AcertusEcsCdkStack/Service/SecurityGroup",
+                        "securityGroupEgress": [
+                          {
+                            "cidrIp": "0.0.0.0/0",
+                            "description": "Allow all outbound traffic by default",
+                            "ipProtocol": "-1"
+                          }
+                        ],
+                        "vpcId": {
+                          "Ref": "AcertusAdminVpc47E30E0F"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroup",
+                      "version": "1.106.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.SecurityGroup",
+                  "version": "1.106.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ecs.FargateService",
+              "version": "1.106.1"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "AcertusEcsCdkStack/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "AcertusEcsCdkStack/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.106.1"
+                }
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "AcertusEcsCdkStack/CDKMetadata/Condition",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnCondition",
+                  "version": "1.106.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.106.1"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.106.1"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.106.1"
+    }
+  }
+}

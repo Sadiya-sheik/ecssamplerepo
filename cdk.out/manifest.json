@@ -1,0 +1,1882 @@
+{
+  "version": "11.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "AcertusEcsCdkStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "AcertusEcsCdkStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpc47E30E0F",
+            "trace": [
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1215:21)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpublicsubSubnet1SubnetD015648A",
+            "trace": [
+              "new Subnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1549:20)",
+              "new PublicSubnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1764:5)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1395:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1377:28)",
+              "Vpc.createSubnets (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1366:12)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1244:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpublicsubSubnet1RouteTable6C430541",
+            "trace": [
+              "new Subnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1567:19)",
+              "new PublicSubnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1764:5)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1395:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1377:28)",
+              "Vpc.createSubnets (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1366:12)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1244:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpublicsubSubnet1RouteTableAssociation3465FA41",
+            "trace": [
+              "new Subnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1573:5)",
+              "new PublicSubnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1764:5)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1395:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1377:28)",
+              "Vpc.createSubnets (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1366:12)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1244:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpublicsubSubnet1DefaultRoute8DE05EEC",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1589:19)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1263:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1262:46)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpublicsubSubnet1EIP6BC6C42A",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1776:21)",
+              "NatGatewayProvider.configureNat (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:228:27)",
+              "Vpc.createNatGateways (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1347:14)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1269:14)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpublicsubSubnet1NATGatewayF3883B66",
+            "trace": [
+              "PublicSubnet.addNatGateway (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1774:17)",
+              "NatGatewayProvider.configureNat (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:228:27)",
+              "Vpc.createNatGateways (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1347:14)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1269:14)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpublicsubSubnet2Subnet71DF4CF4",
+            "trace": [
+              "new Subnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1549:20)",
+              "new PublicSubnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1764:5)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1395:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1377:28)",
+              "Vpc.createSubnets (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1366:12)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1244:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpublicsubSubnet2RouteTableC49C4369",
+            "trace": [
+              "new Subnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1567:19)",
+              "new PublicSubnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1764:5)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1395:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1377:28)",
+              "Vpc.createSubnets (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1366:12)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1244:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpublicsubSubnet2RouteTableAssociation8D6DAF72",
+            "trace": [
+              "new Subnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1573:5)",
+              "new PublicSubnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1764:5)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1395:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1377:28)",
+              "Vpc.createSubnets (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1366:12)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1244:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpublicsubSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpublicsubSubnet2DefaultRoute58CA9E7D",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1589:19)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1263:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1262:46)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpriivatesubSubnet1SubnetCE3FBBCB",
+            "trace": [
+              "new Subnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1549:20)",
+              "new PrivateSubnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1802:5)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1400:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1377:28)",
+              "Vpc.createSubnets (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1366:12)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1244:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpriivatesubSubnet1RouteTableCB75ACA6",
+            "trace": [
+              "new Subnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1567:19)",
+              "new PrivateSubnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1802:5)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1400:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1377:28)",
+              "Vpc.createSubnets (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1366:12)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1244:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpriivatesubSubnet1RouteTableAssociationCE7A79F0",
+            "trace": [
+              "new Subnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1573:5)",
+              "new PrivateSubnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1802:5)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1400:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1377:28)",
+              "Vpc.createSubnets (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1366:12)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1244:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpriivatesubSubnet1DefaultRoute4A1890C6",
+            "trace": [
+              "PrivateSubnet.addRoute (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1635:19)",
+              "NatGatewayProvider.configureSubnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:245:12)",
+              "NatGatewayProvider.configureNat (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:238:12)",
+              "Vpc.createNatGateways (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1347:14)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1269:14)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpriivatesubSubnet2Subnet3D971429",
+            "trace": [
+              "new Subnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1549:20)",
+              "new PrivateSubnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1802:5)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1400:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1377:28)",
+              "Vpc.createSubnets (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1366:12)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1244:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpriivatesubSubnet2RouteTableC363C5D3",
+            "trace": [
+              "new Subnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1567:19)",
+              "new PrivateSubnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1802:5)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1400:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1377:28)",
+              "Vpc.createSubnets (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1366:12)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1244:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpriivatesubSubnet2RouteTableAssociationA026A67A",
+            "trace": [
+              "new Subnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1573:5)",
+              "new PrivateSubnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1802:5)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1400:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1377:28)",
+              "Vpc.createSubnets (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1366:12)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1244:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/adminpriivatesubSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcadminpriivatesubSubnet2DefaultRoute123379AA",
+            "trace": [
+              "PrivateSubnet.addRoute (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1635:19)",
+              "NatGatewayProvider.configureSubnet (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:245:12)",
+              "NatGatewayProvider.configureNat (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:238:12)",
+              "Vpc.createNatGateways (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1347:14)",
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1269:14)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcIGWCF6B1851",
+            "trace": [
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1251:19)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Acertus-Admin-Vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AcertusAdminVpcVPCGW3186C63F",
+            "trace": [
+              "new Vpc (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1257:19)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:12:26)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyCluster4C1BA579",
+            "trace": [
+              "new Cluster (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:167:21)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:59:25)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "desiredCapacity has been configured. Be aware this will reset the size of your AutoScalingGroup on every deployment. See https://github.com/aws/aws-cdk/issues/5215",
+            "trace": [
+              "Annotations.addMessage (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\annotations.ts:92:25)",
+              "Annotations.addWarning (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\annotations.ts:31:10)",
+              "new AutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.ts:1003:28)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:260:30)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyClusterDefaultAutoScalingGroupCapacityInstanceSecurityGroupB9E866B5",
+            "trace": [
+              "new SecurityGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:429:26)",
+              "new AutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.ts:934:49)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:260:30)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyClusterDefaultAutoScalingGroupCapacityInstanceRole55343BBD",
+            "trace": [
+              "new Role (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:326:18)",
+              "new AutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.ts:942:31)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:260:30)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/InstanceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyClusterDefaultAutoScalingGroupCapacityInstanceRoleDefaultPolicy30978618",
+            "trace": [
+              "new Policy (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:367:28)",
+              "AutoScalingGroup.addToRolePolicy (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.ts:1122:15)",
+              "Cluster.configureAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:354:22)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:307:10)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:267:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyClusterDefaultAutoScalingGroupCapacityInstanceProfile115717A8",
+            "trace": [
+              "new AutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.ts:953:24)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:260:30)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/LaunchConfig": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyClusterDefaultAutoScalingGroupCapacityLaunchConfig797D41B1",
+            "trace": [
+              "new AutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.ts:963:26)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:260:30)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/ASG": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyClusterDefaultAutoScalingGroupCapacityASGEE30310C",
+            "trace": [
+              "new AutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.ts:1052:29)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:260:30)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/DrainECSHook/Function/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyClusterDefaultAutoScalingGroupCapacityDrainECSHookFunctionServiceRoleDD05C69C",
+            "trace": [
+              "new Role (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:326:18)",
+              "new Function (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:580:31)",
+              "new InstanceDrainHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.ts:67:16)",
+              "Cluster.configureAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:394:7)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:307:10)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:267:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/DrainECSHook/Function/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyClusterDefaultAutoScalingGroupCapacityDrainECSHookFunctionServiceRoleDefaultPolicy34116F29",
+            "trace": [
+              "new Policy (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:367:28)",
+              "Function.addToRolePolicy (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:264:15)",
+              "new InstanceDrainHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.ts:89:8)",
+              "Cluster.configureAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:394:7)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:307:10)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:267:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/DrainECSHook/Function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyClusterDefaultAutoScalingGroupCapacityDrainECSHookFunctionD7DD402A",
+            "trace": [
+              "new Function (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:642:35)",
+              "new InstanceDrainHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.ts:67:16)",
+              "Cluster.configureAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:394:7)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:307:10)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:267:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/DrainECSHook/Function/AllowInvoke:AcertusEcsCdkStackMyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHookTopic8A7E3466": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyClusterDefaultAutoScalingGroupCapacityDrainECSHookFunctionAllowInvokeAcertusEcsCdkStackMyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHookTopic8A7E34660518A98D",
+            "trace": [
+              "Function.addPermission (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:246:5)",
+              "LambdaSubscription.bind (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-sns-subscriptions\\lib\\lambda.ts:34:13)",
+              "Topic.addSubscription (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic-base.ts:70:45)",
+              "FunctionHook.bind (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling-hooktargets\\lib\\lambda-hook.ts:35:11)",
+              "new LifecycleHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\lifecycle-hook.ts:104:50)",
+              "AutoScalingGroup.addLifecycleHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.ts:721:12)",
+              "new InstanceDrainHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.ts:80:28)",
+              "Cluster.configureAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:394:7)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:307:10)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:267:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/DrainECSHook/Function/Topic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyClusterDefaultAutoScalingGroupCapacityDrainECSHookFunctionTopic182378CB",
+            "trace": [
+              "new Subscription (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-sns\\lib\\subscription.ts:108:5)",
+              "Topic.addSubscription (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic-base.ts:84:5)",
+              "FunctionHook.bind (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling-hooktargets\\lib\\lambda-hook.ts:35:11)",
+              "new LifecycleHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\lifecycle-hook.ts:104:50)",
+              "AutoScalingGroup.addLifecycleHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.ts:721:12)",
+              "new InstanceDrainHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.ts:80:28)",
+              "Cluster.configureAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:394:7)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:307:10)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:267:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/LifecycleHookDrainHook/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHookRole4CB1E106",
+            "trace": [
+              "new Role (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:326:18)",
+              "new LifecycleHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\lifecycle-hook.ts:100:31)",
+              "AutoScalingGroup.addLifecycleHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.ts:721:12)",
+              "new InstanceDrainHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.ts:80:28)",
+              "Cluster.configureAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:394:7)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:307:10)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:267:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/LifecycleHookDrainHook/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHookRoleDefaultPolicy136A9F23",
+            "trace": [
+              "new Policy (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:367:28)",
+              "Function.addToPrincipal (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:164:61)",
+              "Function.addToPrincipalOrResource (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:115:26)",
+              "Topic.grantPublish (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic-base.ts:119:22)",
+              "TopicHook.bind (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling-hooktargets\\lib\\topic-hook.ts:13:16)",
+              "FunctionHook.bind (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling-hooktargets\\lib\\lambda-hook.ts:36:33)",
+              "new LifecycleHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\lifecycle-hook.ts:104:50)",
+              "AutoScalingGroup.addLifecycleHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.ts:721:12)",
+              "new InstanceDrainHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.ts:80:28)",
+              "Cluster.configureAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:394:7)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:307:10)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:267:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/LifecycleHookDrainHook/Topic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHookTopic06F84FD7",
+            "trace": [
+              "new Topic (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic.ts:100:22)",
+              "FunctionHook.bind (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling-hooktargets\\lib\\lambda-hook.ts:27:19)",
+              "new LifecycleHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\lifecycle-hook.ts:104:50)",
+              "AutoScalingGroup.addLifecycleHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.ts:721:12)",
+              "new InstanceDrainHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.ts:80:28)",
+              "Cluster.configureAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:394:7)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:307:10)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:267:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyCluster/DefaultAutoScalingGroupCapacity/LifecycleHookDrainHook/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyClusterDefaultAutoScalingGroupCapacityLifecycleHookDrainHook5FC213B6",
+            "trace": [
+              "new LifecycleHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\lifecycle-hook.ts:106:22)",
+              "AutoScalingGroup.addLifecycleHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.ts:721:12)",
+              "new InstanceDrainHook (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\drain-hook\\instance-drain-hook.ts:80:28)",
+              "Cluster.configureAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:394:7)",
+              "Cluster.addAutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:307:10)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:267:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceLBDE830E97",
+            "trace": [
+              "new BaseLoadBalancer (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-load-balancer.ts:208:22)",
+              "new ApplicationLoadBalancer (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-load-balancer.ts:85:5)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:409:48)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:119:5)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceLBSecurityGroup6FBF16F1",
+            "trace": [
+              "new SecurityGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:429:26)",
+              "new ApplicationLoadBalancer (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-load-balancer.ts:92:52)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:409:48)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:119:5)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/LB/SecurityGroup/to AcertusEcsCdkStackMyFargateServiceSecurityGroupA21F5E73:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceLBSecurityGrouptoAcertusEcsCdkStackMyFargateServiceSecurityGroupA21F5E738045A6086F",
+            "trace": [
+              "SecurityGroup.addEgressRule (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:108:7)",
+              "SecurityGroup.addEgressRule (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:476:13)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:131:23",
+              "ReactiveList.forEachAndForever (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:267:7)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:130:45",
+              "ReactiveList.forEachAndForever (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:267:7)",
+              "Connections.allowTo (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:129:26)",
+              "Connections.allowFrom (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:161:25)",
+              "ApplicationListener.registerConnectable (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.ts:461:29)",
+              "ApplicationTargetGroup.registerConnectable (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.ts:200:16)",
+              "Object.attachToApplicationTargetGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.ts:474:21)",
+              "FargateService.attachToApplicationTargetGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.ts:436:43)",
+              "ApplicationTargetGroup.addTarget (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.ts:152:29)",
+              "ApplicationLoadBalancedFargateService.addServiceAsTarget (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:514:22)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:177:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceLBPublicListener61A1042F",
+            "trace": [
+              "new BaseListener (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-listener.ts:109:22)",
+              "new ApplicationListener (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.ts:191:5)",
+              "ApplicationLoadBalancer.addListener (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-load-balancer.ts:107:12)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:425:34)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:119:5)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceLBPublicListenerECSGroup4A3EDF05",
+            "trace": [
+              "new TargetGroupBase (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\shared\\base-target-group.ts:251:21)",
+              "new ApplicationTargetGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.ts:121:5)",
+              "ApplicationListener.addTargets (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.ts:361:19)",
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:430:38)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:119:5)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceLoadBalancerDNS704F6391",
+            "trace": [
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:496:5)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:119:5)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/ServiceURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceServiceURL4CF8398A",
+            "trace": [
+              "new ApplicationLoadBalancedServiceBase (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:497:5)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:119:5)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/TaskDef/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceTaskDefTaskRole62C7D397",
+            "trace": [
+              "new Role (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:326:18)",
+              "new TaskDefinition (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:377:39)",
+              "new FargateTaskDefinition (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-task-definition.ts:111:5)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:129:29)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceTaskDef5DA17B39",
+            "trace": [
+              "new TaskDefinition (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:385:21)",
+              "new FargateTaskDefinition (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-task-definition.ts:111:5)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:129:29)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/TaskDef/web": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "Proper policies need to be attached before pulling from ECR repository, or use 'fromEcrRepository'.",
+            "trace": [
+              "Annotations.addMessage (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\annotations.ts:92:25)",
+              "Annotations.addWarning (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\annotations.ts:31:10)",
+              "RepositoryImage.bind (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\images\\repository.ts:43:29)",
+              "new ContainerDefinition (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.ts:432:36)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:522:12)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:144:45)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/TaskDef/web/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceTaskDefwebLogGroup4A6C44E8",
+            "trace": [
+              "new LogGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-group.ts:373:22)",
+              "AwsLogDriver.bind (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\log-drivers\\aws-log-driver.ts:119:44)",
+              "new ContainerDefinition (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.ts:434:44)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:522:12)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:144:45)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/TaskDef/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceTaskDefExecutionRoleD6305504",
+            "trace": [
+              "new Role (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:326:18)",
+              "FargateTaskDefinition.obtainExecutionRole (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:593:29)",
+              "AwsLogDriver.bind (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\log-drivers\\aws-log-driver.ts:123:65)",
+              "new ContainerDefinition (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.ts:434:44)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:522:12)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:144:45)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/TaskDef/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceTaskDefExecutionRoleDefaultPolicyEC22B20F",
+            "trace": [
+              "new Policy (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:367:28)",
+              "Function.addToPrincipal (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:164:61)",
+              "LogGroup.grant (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-group.ts:167:22)",
+              "LogGroup.grantWrite (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-group.ts:160:17)",
+              "AwsLogDriver.bind (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\log-drivers\\aws-log-driver.ts:123:19)",
+              "new ContainerDefinition (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.ts:434:44)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:522:12)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:144:45)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceF490C034",
+            "trace": [
+              "new BaseService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.ts:376:21)",
+              "new FargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-service.ts:153:5)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:159:20)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceSecurityGroup7016792A",
+            "trace": [
+              "new SecurityGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:429:26)",
+              "FargateService.configureAwsVpcNetworkingWithSecurityGroups (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.ts:691:25)",
+              "new FargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-service.ts:173:10)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:159:20)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/MyFargateService/Service/SecurityGroup/from AcertusEcsCdkStackMyFargateServiceLBSecurityGroup709ED4C3:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFargateServiceSecurityGroupfromAcertusEcsCdkStackMyFargateServiceLBSecurityGroup709ED4C3800133C60F",
+            "trace": [
+              "SecurityGroup.addIngressRule (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:90:7)",
+              "SecurityGroup.addIngressRule (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:446:13)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:154:23",
+              "ReactiveList.forEachAndForever (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:267:7)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:153:45",
+              "ReactiveList.forEachAndForever (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:267:7)",
+              "Connections.allowFrom (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\connections.ts:152:26)",
+              "ApplicationListener.registerConnectable (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-listener.ts:461:29)",
+              "ApplicationTargetGroup.registerConnectable (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.ts:200:16)",
+              "Object.attachToApplicationTargetGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.ts:474:21)",
+              "FargateService.attachToApplicationTargetGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.ts:436:43)",
+              "ApplicationTargetGroup.addTarget (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-elasticloadbalancingv2\\lib\\alb\\application-target-group.ts:152:29)",
+              "ApplicationLoadBalancedFargateService.addServiceAsTarget (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\base\\application-load-balanced-service-base.ts:514:22)",
+              "new ApplicationLoadBalancedFargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs-patterns\\lib\\fargate\\application-load-balanced-fargate-service.ts:177:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:63:9)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/SsmParameterValue:--aws--service--ecs--optimized-ami--amazon-linux-2--recommended--image_id:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceecsoptimizedamiamazonlinux2recommendedimageidC96584B6F00A464EAD1953AFF4B05118Parameter",
+            "trace": [
+              "Function.fromStringParameterAttributes (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ssm\\lib\\parameter.ts:328:9)",
+              "Function.valueForTypedStringParameter (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ssm\\lib\\parameter.ts:398:17)",
+              "EcsOptimizedAmi.getImage (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:613:37)",
+              "new AutoScalingGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-autoscaling\\lib\\auto-scaling-group.ts:958:44)",
+              "Cluster.addCapacity (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\cluster.ts:260:30)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:72:17)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/TaskDef/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TaskDefTaskRole1EDB4A67",
+            "trace": [
+              "new Role (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:326:18)",
+              "new TaskDefinition (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:377:39)",
+              "new FargateTaskDefinition (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-task-definition.ts:111:5)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:76:39)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TaskDef54694570",
+            "trace": [
+              "new TaskDefinition (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:385:21)",
+              "new FargateTaskDefinition (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-task-definition.ts:111:5)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:76:39)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/TaskDef/DefaultContainer": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "Proper policies need to be attached before pulling from ECR repository, or use 'fromEcrRepository'.",
+            "trace": [
+              "Annotations.addMessage (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\annotations.ts:92:25)",
+              "Annotations.addWarning (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\annotations.ts:31:10)",
+              "RepositoryImage.bind (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\images\\repository.ts:43:29)",
+              "new ContainerDefinition (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\container-definition.ts:432:36)",
+              "FargateTaskDefinition.addContainer (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\task-definition.ts:522:12)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:77:31)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceD69D759B",
+            "trace": [
+              "new BaseService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.ts:376:21)",
+              "new FargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-service.ts:153:5)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:82:28)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceSecurityGroupC96ED6A7",
+            "trace": [
+              "new SecurityGroup (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:429:26)",
+              "FargateService.configureAwsVpcNetworkingWithSecurityGroups (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\base\\base-service.ts:691:25)",
+              "new FargateService (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\aws-ecs\\lib\\fargate\\fargate-service.ts:173:10)",
+              "new AcertusEcsCdkStack (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\lib\\acertus-ecs-cdk-stack.ts:82:28)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\bin\\acertus-ecs-cdk.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.ts:22:24)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:140:5",
+              "visit (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:202:5)",
+              "visit (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:198:5)",
+              "injectMetadataResources (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:131:3)",
+              "Object.synthesize (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:18:3)",
+              "App.synth (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\stage.ts:180:23)",
+              "process.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:467:12)",
+              "process.emit (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\source-map-support\\source-map-support.js:495:21)",
+              "process.emit (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\source-map-support\\source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/AcertusEcsCdkStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.ts:31:27)",
+              "C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:140:5",
+              "visit (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:202:5)",
+              "visit (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:198:5)",
+              "injectMetadataResources (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:131:3)",
+              "Object.synthesize (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:18:3)",
+              "App.synth (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\stage.ts:180:23)",
+              "process.<anonymous> (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\@aws-cdk\\core\\lib\\app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:467:12)",
+              "process.emit (C:\\Users\\sadiya.sheikh\\AppData\\Local\\npm-cache\\_npx\\1bf7c3c15bf47d04\\node_modules\\source-map-support\\source-map-support.js:495:21)",
+              "process.emit (C:\\Users\\sadiya.sheikh\\acertus-ecs-cdk\\node_modules\\source-map-support\\source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "AcertusEcsCdkStack"
+    }
+  }
+}
