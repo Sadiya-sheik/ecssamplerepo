@@ -35,14 +35,33 @@ export class AcertusEcsCdkStacksample extends cdk.Stack {
     //const cloudfronturl = "arn:aws:cloudfront::850805969385:distribution/E3SXCGGDWS0B0P";
     const clientPrefix = "ADMINUI-sample";
 
-    const vpc = ec2.Vpc.fromLookup(this, `${clientPrefix}-vpc`, {
+    /*const vpc = ec2.Vpc.fromLookup(this, `${clientPrefix}-vpc`, {
       vpcId: "vpc-01e4c6262e955743a",
+    });*/
+    
+    // New VPC creation
+    const adminvpc = new ec2.Vpc(this, `${clientPrefix}-vpc`, {
+      maxAzs: 2,
+      cidr: "10.0.0.0/16",
+      natGateways: 1,
+      subnetConfiguration: [
+        {
+          cidrMask: 24,
+          name: 'adminpublicsub',
+          subnetType: ec2.SubnetType.PUBLIC
+        },
+        {
+          cidrMask: 24,
+          name: 'adminpriivatesub',
+          subnetType: ec2.SubnetType.PRIVATE
+        }]
+
     });
 
     // The code that defines your stack goes here
     const cluster = new ecs.Cluster(this, `${clientPrefix}-cluster`, {
       clusterName: `${clientPrefix}-cluster`,
-      vpc,
+      vpc: adminvpc,
     });
 
     // load balancer resources
@@ -50,7 +69,7 @@ export class AcertusEcsCdkStacksample extends cdk.Stack {
       this,
       `${clientPrefix}-elb`,
       {
-        vpc,
+        vpc: adminvpc,
         vpcSubnets: { subnets: vpc.publicSubnets },
         internetFacing: true,
       }
@@ -77,7 +96,7 @@ export class AcertusEcsCdkStacksample extends cdk.Stack {
       `${clientPrefix}-target`,
       {
         port: 80,
-        vpc,
+        vpc:adminvpc,
         protocol: elasticloadbalancing.ApplicationProtocol.HTTP,
         targetType: elasticloadbalancing.TargetType.IP,
       }
@@ -108,7 +127,7 @@ export class AcertusEcsCdkStacksample extends cdk.Stack {
     });
 
     const elbSG = new ec2.SecurityGroup(this, `${clientPrefix}-elbSG`, {
-      vpc,
+      vpc:adminvpc,
       allowAllOutbound: true,
     });
 
@@ -171,7 +190,7 @@ export class AcertusEcsCdkStacksample extends cdk.Stack {
     container.addPortMappings({ containerPort: 8080 });
 
     const ecsSG = new ec2.SecurityGroup(this, `${clientPrefix}-ecsSG`, {
-      vpc,
+      vpc: adminvpc,
       allowAllOutbound: true,
     });
 
