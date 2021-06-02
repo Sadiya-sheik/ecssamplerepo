@@ -70,7 +70,7 @@ export class AcertusEcsCdkStacksample extends cdk.Stack {
       `${clientPrefix}-elb`,
       {
         vpc: adminvpc,
-        vpcSubnets: { subnets: vpc.publicSubnets },
+        vpcSubnets: { subnets: adminvpc.publicSubnets },
         internetFacing: true,
       }
     );
