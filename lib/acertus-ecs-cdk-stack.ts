@@ -26,14 +26,14 @@ interface ECSStackProps extends cdk.StackProps {
  * Creates all ECS resources from docker containers through to domain configuration
  *
  */
-export class AcertusEcsCdkStacksample extends cdk.Stack {
+export class AcertusEcsCdkStackfinal extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     //const routecertificate = certificatemanager.Certificate.fromCertificateArn(this, "certificate", "arn:aws:acm:ap-south-1:665106695518:certificate/d55e09cc-f9e7-4b8e-9c69-0d85bcd24436");
     const repository = ecr.Repository.fromRepositoryArn(this, "repository", 'arn:aws:ecr:ap-south-1:665106695518:repository/adminui1');
     //const cloudfronturl = "arn:aws:cloudfront::850805969385:distribution/E3SXCGGDWS0B0P";
-    const clientPrefix = "ADMINUI-sample";
+    const clientPrefix = "ADMINUI-final";
 
     /*const vpc = ec2.Vpc.fromLookup(this, `${clientPrefix}-vpc`, {
       vpcId: "vpc-01e4c6262e955743a",
@@ -140,7 +140,7 @@ export class AcertusEcsCdkStacksample extends cdk.Stack {
     elb.addSecurityGroup(elbSG);
 
     const bucket = new s3.Bucket(this, `${clientPrefix}-s3-bucket`, {
-      bucketName: `adminuisample-assets`,
+      bucketName: `adminuifinal-assets`,
     });
 
     const taskRole = new iam.Role(this, `${clientPrefix}-task-role`, {
