@@ -202,7 +202,7 @@ export class AcertusEcsCdkStackfinal extends cdk.Stack {
 
     const service = new ecs.FargateService(this, `${clientPrefix}-service`, {
       cluster,
-      desiredCount: 1,
+      desiredCount: 2,
       taskDefinition,
       securityGroups: [ecsSG],
       assignPublicIp: false,
