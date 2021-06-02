@@ -186,7 +186,7 @@ export class AcertusEcsCdkStacksample extends cdk.Stack {
       desiredCount: 1,
       taskDefinition,
       securityGroups: [ecsSG],
-      assignPublicIp: true,
+      assignPublicIp: false,
     });
 
     service.attachToApplicationTargetGroup(targetGroupHttp);
