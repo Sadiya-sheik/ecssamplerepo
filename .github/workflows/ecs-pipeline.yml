@@ -2,9 +2,9 @@ name: Deployment to dev environment
 
 on:
  push:
-    branches: [ main1 ]
+    branches: [ main ]
  pull_request:
-    branches: [ main1 ]
+    branches: [ main ]
 
 jobs:
   Cleanup: 
@@ -46,7 +46,9 @@ jobs:
           #docker build -t ${{secrets.IMAGE_NAME}} .
           #docker tag adminui1:latest 665106695518.dkr.ecr.ap-south-1.amazonaws.com/adminui1:latest
           #docker push 665106695518.dkr.ecr.ap-south-1.amazonaws.com/adminui1:latest
-          npm install
+          npm ci
+          cd ADMINUI
+          npm ci
           #node ./config/tables/create-customer-info-table.js
           #node ./config/tables/load-customer-info.js
           cdk synth
