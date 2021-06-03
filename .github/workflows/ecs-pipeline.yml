@@ -49,6 +49,7 @@ jobs:
           npm install
           cd ADMINUI/
           npm install
+          npm run build
           pwd
           ls -ltr
           #node ./config/tables/create-customer-info-table.js
