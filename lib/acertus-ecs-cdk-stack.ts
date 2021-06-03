@@ -7,6 +7,7 @@ import * as iam from "@aws-cdk/aws-iam";
 import * as route53 from "@aws-cdk/aws-route53";
 import * as route53targets from "@aws-cdk/aws-route53-targets";
 import * as certificatemanager from "@aws-cdk/aws-certificatemanager";
+import * as cloudfront from "@aws-cdk/aws-cloudfront";
 
 import * as elasticloadbalancing from "@aws-cdk/aws-elasticloadbalancingv2";
 /*
@@ -32,7 +33,7 @@ export class AcertusEcsCdkStackfinal extends cdk.Stack {
 
     //const routecertificate = certificatemanager.Certificate.fromCertificateArn(this, "certificate", "arn:aws:acm:ap-south-1:665106695518:certificate/d55e09cc-f9e7-4b8e-9c69-0d85bcd24436");
     const repository = ecr.Repository.fromRepositoryArn(this, "repository", 'arn:aws:ecr:ap-south-1:665106695518:repository/adminui1');
-    //const cloudfronturl = "arn:aws:cloudfront::850805969385:distribution/E3SXCGGDWS0B0P";
+    const cloudfronturl = cloudfront.fromLookup("arn:aws:cloudfront::850805969385:distribution/E3SXCGGDWS0B0P");
     const clientPrefix = "ADMINUI-final";
 
     /*const vpc = ec2.Vpc.fromLookup(this, `${clientPrefix}-vpc`, {
@@ -139,10 +140,14 @@ export class AcertusEcsCdkStackfinal extends cdk.Stack {
 
     elb.addSecurityGroup(elbSG);
 
+    //Admin s3 bucket
     const bucket = new s3.Bucket(this, `${clientPrefix}-s3-bucket`, {
       bucketName: `adminuifinal-assets`,
     });
 
+
+
+    //task role for the task definition to add access to other resources
     const taskRole = new iam.Role(this, `${clientPrefix}-task-role`, {
       assumedBy: new iam.ServicePrincipal("ecs-tasks.amazonaws.com"),
       roleName: `${clientPrefix}-task-role`,

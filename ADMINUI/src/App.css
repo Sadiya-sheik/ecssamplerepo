@@ -1,0 +1,120 @@
+
+@import 'antd/dist/antd.css';
+
+.ant-layout-header{
+    height:51px;
+}
+.ant-layout-footer{
+    position: absolute;
+    bottom: 0;
+    top:100%;
+    width: 100%;
+    background: transparent;
+    margin:0 auto;
+}
+.ant-layout-sider{
+    min-width:200px !important;
+    max-width:200px !important;
+    width:200px !important;
+   width: 280px;
+}
+.ant-layout-sider-dark{    
+    background: #f8f8f8; 
+    width: 300px;   
+}
+.App{
+    height:100vh;
+}
+
+.website-logo{
+    height:50px;
+    width:150px;
+}
+.page-wrapper{    
+    padding: 5px;
+}
+.w-100{
+    width:100%;
+}
+.timeline-div{
+    background-color: rgb(245, 245, 245);
+}
+
+.footer {
+    position: absolute;
+   
+    margin-left:2%;
+    border-top: 1px solid #eee;
+    bottom: 0;
+    width: 96%;
+    padding-bottom: 20px;
+  
+    display: flex;
+  
+    align-items: stretch;
+}
+
+ .mt-1{
+     margin-top: 1vh;
+ }
+ .mt-2{
+    margin-top: 2vh;
+}
+.mt-3{
+    margin-top: 3vh;
+}
+.mt-4{
+    margin-top: 4vh;
+}
+.services-ul{
+    list-style:none;
+}
+.services-ul li a{
+    margin-left: -23%;
+    font-weight:500;
+}
+.delivery-status{
+    background-color: orange;
+    border-radius: 5px;
+    color: white;
+}
+.delivery-tracker-btn{
+    background-color: rgb(52, 58, 64);
+    color: white;
+    border-radius: 0px;
+    margin-top: 30px;
+}
+.help-title {
+    text-align: center;
+    color: orange;
+
+}
+.center{
+    text-align: center;
+}
+.orange-text{
+    color:orange;
+}
+.p-0{
+    padding:0;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.bg-dark {
+    background-color: #343a40!important;
+}
+
+.ant-table-tbody{
+    font-size: 12px;
+}
+/* .ant-tabs-content-holder{
+    height: 600px;
+} */
+/* .ant-tabs-tab.ant-tabs-tab-active {
+    border-bottom: 5px solid orange !important;
+    z-index: 2;
+} */

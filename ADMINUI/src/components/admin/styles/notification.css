@@ -1,0 +1,45 @@
+.notification-table{
+    width: 100vw;
+    
+    display: list-item;
+    padding:20px;
+}
+.ant-table-cell{
+    width:150px;
+    text-align: center;
+}
+.ant-table-thead > tr > th, .ant-table-tbody > tr > td, .ant-table tfoot > tr > th, .ant-table tfoot > tr > td {
+    padding: 7px;
+    text-align: center;
+}
+.ant-tag{
+    color: white;    
+    border-radius: 6px;
+    padding: 5px;
+    width: -webkit-fill-available;
+    text-align: center;
+}
+.ant-tag-blue {    
+    background: dodgerblue;      
+}
+.ant-tag-purple{    
+    background: orchid;   
+}
+.ant-tag-green{
+    background: rgb(30, 180, 30);
+}
+.ant-tag-red{
+    background: red;
+}
+.ant-tag-chocolate{
+    background: chocolate;
+}
+.ant-tag-orange{
+    background: orange;
+}
+.ant-table-column-sorters {
+    display: contents;
+}
+.ant-table-column-sorter {    
+    vertical-align: text-top;
+}
