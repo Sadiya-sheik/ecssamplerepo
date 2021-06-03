@@ -46,10 +46,11 @@ jobs:
           #docker build -t ${{secrets.IMAGE_NAME}} .
           #docker tag adminui1:latest 665106695518.dkr.ecr.ap-south-1.amazonaws.com/adminui1:latest
           #docker push 665106695518.dkr.ecr.ap-south-1.amazonaws.com/adminui1:latest
+          npm install --global yarn
           npm install
           cd ADMINUI/
-          npm install
-          npm run build
+          yarn install
+          yarn build
           pwd
           ls -ltr
           #node ./config/tables/create-customer-info-table.js
