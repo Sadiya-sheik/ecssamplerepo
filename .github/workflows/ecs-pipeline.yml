@@ -2,9 +2,9 @@ name: Deployment to dev environment
 
 on:
  push:
-    branches: [ main ]
+    branches: [ main1 ]
  pull_request:
-    branches: [ main ]
+    branches: [ main1 ]
 
 jobs:
   Cleanup: 
