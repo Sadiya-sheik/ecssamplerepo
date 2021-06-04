@@ -49,6 +49,7 @@ jobs:
           npm install
           cd ADMINUI
           npm install
+          cd ..
           #node ./config/tables/create-customer-info-table.js
           #node ./config/tables/load-customer-info.js
           cdk synth
