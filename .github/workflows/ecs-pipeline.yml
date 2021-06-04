@@ -49,6 +49,11 @@ jobs:
           npm install
           cd ADMINUI
           npm install
+          npm run build
+          echo "THIS is the PRESENT WORKING DIRECTORY"
+          pwd
+          echo "AND these are the CONTENTS"
+          ls
           cd ..
           #node ./config/tables/create-customer-info-table.js
           #node ./config/tables/load-customer-info.js
